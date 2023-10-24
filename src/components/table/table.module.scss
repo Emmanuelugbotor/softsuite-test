@@ -1,0 +1,60 @@
+@import "../../styles/variables.scss";
+
+.table {
+    width: 100%;
+    font-family: $font;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: none;
+
+    thead {
+        background-color: $text-primary;
+        height: 50px;
+        
+        tr {
+            font-size: $font-size-14;
+            font-weight: $font-weight-500;
+            color: $white;
+
+            th {
+                padding: 0px 10px !important;
+            }
+        }
+    }
+
+    tbody {
+        border: none;
+
+        tr {
+            border: none;
+
+            td {
+                font-size: $font-size-14;
+                font-weight: $font-weight-500;
+                color: #2D416F
+            }
+        }
+    }
+
+    .table td {
+        border: none; 
+    }
+      
+     
+    .table tr {
+        border: none; 
+    }
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $green;
+    border-radius: 5px;
+    color: $green;
+
+    cursor: pointer;
+}

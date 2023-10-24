@@ -1,0 +1,48 @@
+@import "../../styles/variables.scss";
+
+.breadcrumb {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+
+    .breadcrumb_item {
+
+        .breadcrumb_content {
+            display: flex;
+            align-items: center;
+
+            a {
+                font-family: $font;
+                font-size: $font-size-16;
+                font-weight: $font-weight-700;
+                color: #ABB3C5;
+                text-decoration: none;
+            }
+
+            .breadcrumb_separator {
+                display: flex;
+                align-items: center;
+                padding: 0px 10px;
+
+                .icon {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+
+    .active {
+        font-family: $font;
+        font-size: $font-size-16;
+        font-weight: $font-weight-700;
+        color: $text-primary;
+    };
+}
+
+.current_index {
+    font-family: $font;
+    font-size: $font-size-16;
+    font-weight: $font-weight-700;
+    color: $text-primary;
+};

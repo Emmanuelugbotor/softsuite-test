@@ -1,0 +1,226 @@
+@import "../../styles/variables.scss";
+
+.container {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    /** Module Switch */
+    .switch_container {
+        width: 270px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 15px;
+
+        img {
+            width: 24px;
+            height: 24px;
+            border-radius: 5px;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+
+            cursor: pointer;
+        }
+
+        .selection_info {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                font-family: $font;
+                font-size: $font-size-14;
+                font-weight: $font-weight-500;
+                color: $text-primary
+            };
+
+            h4 {
+                font-family: $font;
+                font-size: $font-size-16;
+                font-weight: $font-weight-800;
+                color: $text-primary;
+                margin-top: 3px;
+            }
+        }
+    }
+
+    .menu_options {
+        flex: 1;
+        margin-top: 30px;
+
+        .parent_option {
+            width: 270px;
+            height: 40px;
+            list-style: none;
+            padding: 0px 15px;
+
+            a {
+                text-decoration: none;
+                outline: none;
+            }
+
+            hr {
+                background: #96A0B7;
+            }
+
+            .item {
+                font-family: "Poppins", sans-serif;
+                font-size: $font-size-14;
+                font-weight: $font-weight-500;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 40px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                padding: 10px;
+                color: $tint;
+                
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $menu-hover;
+                    color: $text-primary;
+                    font-weight: $font-weight-500;
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    img {
+                        width:16px;
+                        height: 16px;
+                    }
+                }
+
+                // .icon {
+                //     width:20px;
+                //     height: 20px;
+                //     transition: transform 0.5s ease;
+                // }
+
+                // .rotate_icon {
+                //     transform: rotate(90deg);
+                // }
+                .icon {
+                    width:20px;
+                    height: 20px;
+                    transition: opacity 0.3s ease-in-out;
+                    opacity: 0.5;
+                }
+
+                .rotate_icon {
+                    opacity: 1
+                }
+            }
+
+            .active {
+                font-family: "Poppins", sans-serif;
+                font-size: $font-size-14;
+                font-weight: $font-weight-500;
+                background-color: $green;
+                color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 40px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                padding: 10px;
+                
+                cursor: pointer;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    img {
+                        width:16px;
+                        height: 16px;
+                    }
+                }
+
+                .icon {
+                    width:20px;
+                    height: 20px;
+                    transition: opacity 0.3s ease-in-out;
+                    opacity: 0.5;
+                }
+
+                .rotate_icon {
+                    opacity: 1
+                }
+            }
+
+            .child_menu {
+                font-family: "Poppins", sans-serif;
+                background-color: $grey-bg;
+                border-radius: 5px;
+                list-style: none;
+                padding: 0;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                padding: 10px 15px;
+                color: $tint;
+
+                .child_link {
+                  font-family: "Poppins", sans-serif;
+                  font-size: $font-size-12;
+                  font-weight: $font-weight-500;
+                  border-radius: 5px;
+                  margin-bottom: 10px;
+                  padding: 5px 5px;
+
+                  cursor: pointer;
+
+                  &:last-of-type {
+                    margin-bottom: 0px;
+                  };
+
+                  &:hover {
+                    &:hover {
+                        background-color: $menu-hover;
+                        color: $text-primary;
+                        font-weight: $font-weight-500;
+                    }
+                  }
+                }
+
+                .active {
+                    font-family: "Poppins", sans-serif;
+                    font-size: $font-size-12;
+                    font-weight: $font-weight-500;
+                    background-color: $active-green;
+                    color: $text-primary;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+                    padding: 5px 5px;
+  
+                    cursor: pointer;
+  
+                    &:last-of-type {
+                      margin-bottom: 0px;
+                    };
+                  }
+            }
+        }
+    }
+}

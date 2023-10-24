@@ -1,0 +1,51 @@
+$font: 'Gilroy', sans-serif;
+$white: #fff;
+$red: #ff0000;
+$green: #4BAA79;
+$active-green: #F3FFF1;
+$menu-hover: #d1ebea;
+
+$grey-bg: #F6F7F9;
+$text-primary: #2D416F;
+$text-grey: #ABB3C5;
+$tint: #57678C;
+
+
+// =======Fonts Sizes========
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+
+// =======Fonts Weights========
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-700: 700;
+$font-weight-800: 800;
+
+
+@mixin for-size($size) {
+    @if $size == phone-only {
+      @media (max-width: 599px) {
+        @content;
+      }
+    } @else if $size == tablet-portrait-down {
+      @media (max-width: 768px) {
+        @content;
+      }
+    } @else if $size == tablet-landscape-down {
+      @media (max-width: 990px) {
+        @content;
+      }
+    } @else if $size == desktop-up {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    } @else if $size == big-desktop-up {
+      @media (min-width: 1800px) {
+        @content;
+      }
+    }
+  }
